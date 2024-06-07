@@ -1,0 +1,36 @@
+Hock burn prevalence seems to be higher than previously thought. Open Cages did a study of 514 chickens sold in 22 different branches of Lidl (a British supermarket), and found 74% of them had visible ulcers at the point of sale. (Open Cages 2023) These results match a study from Cambridge University Veterinary Medicine department in 2010, which found hock burn prevalence of 82%. This report observes  that chickens with the worst legions would have them cut off during processing, so as Broom states, “the frequencies of lesions in farmed birds would be higher than those reported here [at the supermarket]”. (Broom and Reefmann 2005) 
+
+
+In February this year, the BBC asked the UK’s 10 largest supermarkets to self-report their hock burn statistics. Five didn’t respond, and the five that did respond self-reported numbers ranging from 2.7% to 36.7%, but note bene that the BBC didn’t specify a methodology for this assessment, so there is no guarantee of standardization between these reports. (Prior 2024) 
+
+One reason that hock burns remain high despite improvements in husbandry could be that modern breeds allow for chickens to be slaughtered earlier. Modern broilers are slaughtered at around 42 days, as opposed to 70 days in the 1980s. This means that hock burns, which affect young and growing chickens more than older chickens, have less time to heal. (Haslam et al. 2006, 17; Martland 1985) 
+
+Hock burns are a type of contact dermatitis, meaning they are ulcers that take time to grow. They are specifically sited on the back of the knee. For this reason they are distinct from injuries from shackle inversion, which happen on the top of the foot, and will not have time to ulcerate. Many chickens with hock burns will also have dermatitis on the rest of their feet, but these are cut off before making it to the consumer. 
+
+Hock burn is highly system-dependent. One study of 11 chicken production sites found 98%+ incidence of hock burn in freerange production systems, compared with 0% hock burn in organic production systems. (Haslam et al. 2006) Nota bene that organic chickens are a very small majority of overall production. Also note that visible legions are only in the worst cases of dermatitis, with sub-visible cases still representing clinical pain to the chickens. 
+
+Red Tractor certifies 95% of British chickens, including the ones analyzed in the Open Cages report. 
+
+> chickens.2023<-279399774
+> layers.2023<-40245799
+> broilers.2023<-(total.chickens.2023-total.layers.2023)
+> #NB DEFRA June survey is a snapshot, and each chicken will be replaced 6.1 times over the course of the year.
+> total.broilers.2023<-broilers.2023*6.1
+> #Adjusting to Red Tractor levels; adjusting to hock burn from open cages report
+> hock.burn<-total.broilers.2023*0.95*0.74
+>
+> print(hock.burn)
+[1] 1025563991
+
+If the Open Cages study is representational of hock burn prevalence in the national flock, we can expect around a billion UK chickens to suffer from hock burn in any given year. 
+
+Broom, D.M., and N. Reefmann. 2005. ‘Chicken Welfare as Indicated by Lesions on Carcases in Supermarkets’. British Poultry Science 46 (4): 407–14. https://doi.org/10.1080/00071660500181149.
+Haslam, S.M., S.N. Brown, L.J. Wilkins, S.C. Kestin, P.D. Warriss, and C.J. Nicol. 2006. ‘Preliminary Study to Examine the Utility of Using Foot Burn or Hock Burn to Assess Aspects of Housing Conditions for Broiler Chicken’. British Poultry Science 47 (1): 13–18. https://doi.org/10.1080/00071660500475046.
+Martland, M. F. 1985. ‘Ulcerative Dermatitis Dm Broiler Chickens: The Effects of Wet Litter’. Avian Pathology 14 (3): 353–64.
+Mönki, Jenni, Markku Saastamoinen, Ninja Karikoski, Minna Rajamäki, Marja Raekallio, Jouni Junnila, Susanna Särkijärvi, Marianna Norring, Anna Valros, and Silja Oranen Ben Fatma. 2021. ‘Effects of Bedding Material on Equine Lower Airway Inflammation: A Crossover Study Comparing Peat and Wood Shavings’. Frontiers in Veterinary Science 8:656814.
+Open Cages. 2023. ‘FRANKENMEAT: INVESTIGATION INTO THE PRESENCE OF DISEASE IN LIDL GB’S FRESH CHICKEN’. https://drive.google.com/file/d/1CWqC8f68Eg976Ibb6cLWPKe5g0nEidtp/view.
+Prior, Malcolm. 2024. ‘Millions of Store Chickens Suffer Burns from Excrement’. BBC, 29 February 2024. https://www.bbc.co.uk/news/science-environment-68406398.
+Zhou, Ying, Qing Xiu Liu, Xiu Mei Li, Dan Dan Ma, Shuang Xing, Jing Hai Feng, and Min Hong Zhang. 2020. ‘Effects of Ammonia Exposure on Growth Performance and Cytokines in the Serum, Trachea, and Ileum of Broilers’. Poultry Science 99 (5): 2485–93. https://doi.org/10.1016/j.psj.2019.12.063.
+
+
+
