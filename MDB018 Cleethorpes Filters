@@ -1,0 +1,14 @@
+#total mg N over the course of a year
+"N.annual.mg" <-308442800000000
+print(N.annual.mg)
+
+#total mg (N) daily if equal
+N.daily.mg <- (N.annual.mg/365)
+#daily litre effluent
+L.daily.effluent <- 1000000 
+average.N.mgperlitre <- (N.daily.mg/L.daily.effluent)
+print(average.N.mgperlitre)
+
+#Filter efficacies takes from Table 2 in Surisani 2023
+data.spread<- c(64,15.6,91.65,50,62.4,38,27,65,57.14,98.02,75)
+quantile(data.spread)
