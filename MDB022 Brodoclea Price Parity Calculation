@@ -1,0 +1,47 @@
+#Brodoclea Woodland Farm price parity estimate
+
+#How much value would the current business need to generate as an ecosystem service,
+#in order to achieve price parity with factory farmed meat? 
+
+price.kg.brodoclea.pork<-6.20
+print(price.kg.brodoclea.pork)
+hang.weight.kg.brodoclea<-70
+farmgate.price.pig<-(price.kg.brodoclea.pork*hang.weight.kg.brodoclea)
+print(farmgate.price.pig)
+
+brodoclea.acres<-430
+brodoclea.sounder<-200
+gdp.farm<-(brodoclea.sounder*farmgate.price.pig)
+print(gdp.farm)
+
+#So farm is generating £434 per pig. They have 200 pigs over 430 acres. 
+#Brodoclea is generating £86000 in income from pork product. 
+
+gdp.acres.brodoclea<-gdp.farm/brodoclea.acres
+print(gdp.acres.brodoclea)
+
+#£201 of pork product is produced per acre per year at Brodoclea.
+
+#Next is calculation of factory farmed pork, for comparisons sake.
+#Data is taken from https://ahdb.org.uk/pork/gb-deadweight-pig-prices-uk-spec, week end 12th Oct 2024
+#NB that this is cheaper, and pigs are harvested fatter. Mangoliza is a smaller breed
+
+price.kg.FF.pork<-2.04
+hang.weight.kg.FF.pork<-93.54 
+FF.price.pig<-(price.kg.FF.pork*hang.weight.kg.FF.pork)
+print(FF.price.pig)
+
+#FF pigs retail for £190. Brodoclea's pigs are £434. 
+
+price.delta<-(farmgate.price.pig-FF.price.pig)
+print(price.delta)
+
+#A FF pig is £243 cheaper than a Brodoclea pig. 
+#But NB that FFs externalize the cost of carbon (importing soy feed, land use change overseas, inter alios)
+#And Brodoclea is currently not charging the Future Forest Company for the carbon it is sequestering, despite increasing regeneration
+#To calculate price parity: 
+
+carbon.payment.requirement.parity<-(price.delta*brodoclea.sounder)/brodoclea.acres
+print(carbon.payment.requirement.parity)
+
+#Brodoclea would only have to charge £113 per acre for ecosystem services for its pork products to achieve price parity with factory farmed meat. 
